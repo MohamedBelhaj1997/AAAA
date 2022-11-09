@@ -11,6 +11,8 @@
 	<groupId>com.esprit.examen</groupId>
 	<artifactId>tpAchatProject</artifactId>
 	<version>1.0.0</version>
+	<packaging>jar</packaging>
+	<version>4.0-SNAPSHOT</version>
 	<name>tpAchatProject</name>
 	<description>tpAchatProject</description>
 	<properties>
