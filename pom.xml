@@ -71,7 +71,15 @@
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 		
-		<distributionManagement>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+						<distributionManagement>
 <repository>
   <id>nexus</id>
   <name>Nexus Releases</name>
@@ -83,13 +91,6 @@
   <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
 </snapshotRepository>
 </distributionManagement>
-	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
 <groupId>org.apache.maven.plugins</groupId>
