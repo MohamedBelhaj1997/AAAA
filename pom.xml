@@ -90,16 +90,37 @@
 				
 
 </plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.3</version>
+				<executions>
+					<execution>
+						<id>jacoco-initialize</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+						<phase>test-compile</phase>
+					</execution>
+					<execution>
+						<id>jacoco-site</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 </plugins>
 </build>
 	
 <distributionManagement>
 		<snapshotRepository>
-			<id>nexus-snapshots</id>
+			<id>deploymentRepo</id>
 			<url>http://192.168.1.139:8081/repository/maven-snapshots</url>
 		</snapshotRepository>
 		<repository>
-			<id>nexus-releases</id>
+			<id>deploymentRepo</id>
 			<url>http://192.168.1.139:8081/repository/maven-releases/</url>
 		</repository>
 	</distributionManagement>
