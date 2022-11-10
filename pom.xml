@@ -17,12 +17,11 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
-	</properties>
-	<properties>
-        <baseNexusURL>${192.168.1.139:8081}</baseNexusURL>
+		<baseNexusURL>${192.168.1.139:8081}</baseNexusURL>
         <targetRepositoryID>${http://192.168.1.139:8081/repository/maven-releases/}</targetRepositoryID>
         <package.final.name>${tpAchatProject}</package.final.name>
-    </properties>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
