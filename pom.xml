@@ -18,6 +18,11 @@
 		<java.version>1.8</java.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
+	<properties>
+        <baseNexusURL>${192.168.1.139:8081}</baseNexusURL>
+        <targetRepositoryID>${http://192.168.1.139:8081/repository/maven-releases/}</targetRepositoryID>
+        <package.final.name>${tpAchatProject}</package.final.name>
+    </properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -107,14 +112,14 @@
                             <goal>deploy-file</goal>
                         </goals>
                         <configuration>
-                            <file>${file}</file>
-                            <groupId>${groupId}</groupId>
-                            <artifactId>${artifactId}</artifactId>
-                            <version>${version}</version>
-                            <packaging>${packaging}</packaging>
+                            <file>${target/tpAchatProject-1.0.jar}</file>
+                            <groupId>${com.esprit.examen}</groupId>
+                            <artifactId>${tpAchatProject}</artifactId>
+                            <version>${1.0}</version>
+                            <packaging>${jar}</packaging>
                             <generatePom>true</generatePom>
-                            <repositoryId>${targetRepositoryID}</repositoryId>
-                            <url>${baseNexusURL}/content/repositories/${targetRepositoryID}</url>
+                            <repositoryId>${deploymentRepo}</repositoryId>
+                            <url>${192.168.1.139:8080}/content/repositories/${maven-releases}</url>
                         </configuration>
                     </execution>
                 </executions>
