@@ -9,7 +9,8 @@ services:
       MYSQL_PASSWORD: mysql
       MYSQL_ROOT_PASSWORD: mysql        
   application:
-    image: achat
+     depends_on:
+      - mysqldb
     build: .
     restart: always
     depends_on:
